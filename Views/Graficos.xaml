@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Graficos="clr-namespace:TutorialGraficos.Graficos"
+             x:Class="TutorialGraficos.Views.Graficos"
+             Title="Graficos">
+    <ContentPage.Resources>
+        <Graficos:Linea x:Key="linea"/>
+        <Graficos:LineaDiscontinua x:Key="lineaDiscontinua"/>
+        <Graficos:Elipse x:Key="Elipse"/>
+        <Graficos:Arco x:Key="Arco"/>
+        <Graficos:ArcoRelleno x:Key="ArcoRelleno"/>
+        <Graficos:Circulo x:Key="Circulo"/>
+        <Graficos:Cuadrado x:Key="Cuadrado"/>
+        <Graficos:CuadradoDiscontinuo x:Key="CuadradoDiscontinuo"/>
+        <Graficos:DibRellenoYTrazos x:Key="RellenoYTrazos"/>
+        <Graficos:DibSombras x:Key="Sombras"/>
+        <Graficos:DibTextoYAtributos x:Key="TextoyAtributos"/>
+        <Graficos:DibujandoTrazado x:Key="CirculoTrazado"/>
+        <Graficos:ExtremosDeLinea x:Key="ExtremosLinea"/>
+        <Graficos:LineasCombinadas x:Key="CombinacionLineas"/>
+        <Graficos:Rectangulo x:Key="DibujarRectangulo"/>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout HorizontalOptions="Center">
+            <Label Text="Dibujando Graficos"
+       FontSize="Medium"
+       FontAttributes="Bold"
+       Margin="0,30,0,20"/>
+
+            <HorizontalStackLayout HorizontalOptions="Center">
+
+
+                <GraphicsView Drawable="{StaticResource linea}"
+                     HeightRequest="150"
+                     WidthRequest="100"/>
+                <GraphicsView Drawable="{StaticResource lineaDiscontinua}"
+                      HeightRequest="150"
+                      WidthRequest="100"/>
+                <GraphicsView Drawable="{StaticResource Elipse}"
+                    HeightRequest="150"
+                    WidthRequest="150"/>
+                <GraphicsView Drawable="{StaticResource Arco}"
+            HeightRequest="150"
+            WidthRequest="150"/>
+                <GraphicsView Drawable="{StaticResource ArcoRelleno}"
+        HeightRequest="150"
+        WidthRequest="150"/>
+                <GraphicsView Drawable="{StaticResource Circulo}"
+        HeightRequest="150"
+        WidthRequest="150"/>
+                <GraphicsView Drawable="{StaticResource Cuadrado}"
+ HeightRequest="150"
+ WidthRequest="150"/>
+                <GraphicsView Drawable="{StaticResource CuadradoDiscontinuo}"
+HeightRequest="150"
+WidthRequest="150"/>
+                <GraphicsView Drawable="{StaticResource RellenoYTrazos }"
+HeightRequest="100"
+WidthRequest="150"/>
+
+
+
+
+
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <GraphicsView Drawable="{StaticResource Sombras}"
+HeightRequest="300"
+WidthRequest="350"/>
+                <GraphicsView Drawable="{StaticResource TextoyAtributos }"
+HeightRequest="300"
+WidthRequest="500"/>
+
+
+            </HorizontalStackLayout>
+            <HorizontalStackLayout x:Name="horizontalStack">
+                <GraphicsView Drawable="{StaticResource CirculoTrazado}"
+HeightRequest="150"
+WidthRequest="150"/>
+                <GraphicsView Drawable="{StaticResource ExtremosLinea}"
+HeightRequest="150"
+WidthRequest="150"/>
+                <GraphicsView Drawable="{StaticResource CombinacionLineas}"
+HeightRequest="150"
+WidthRequest="150"/>
+                <GraphicsView Drawable="{StaticResource DibujarRectangulo}"
+HeightRequest="150"
+WidthRequest="150"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
